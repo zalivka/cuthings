@@ -5,6 +5,14 @@
 
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
+# Check if -nocp is in any of the passed parameters
+skip_checkpoints=false
+for param in "$@"; do
+    if [ "$param" = "-nocp" ]; then
+        skip_checkpoints=true
+        break
+    fi
+done
 
 # Run checkpoints.sh
 if [ "$1" != "-nocp" ]; then
