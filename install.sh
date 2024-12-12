@@ -27,5 +27,5 @@ if [ "$create_env" = true ]; then
 fi
 
 
-pip install -r requirements.txt
+pip install --ignore-installed -r requirements.txt
 echo "All dependencies are installed successfully."
