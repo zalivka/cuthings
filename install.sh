@@ -26,6 +26,6 @@ if [ "$create_env" = true ]; then
     source cutenv/bin/activate
 fi
 
-
-pip install --ignore-installed -r requirements.txt
+pip install --ignore-installed blinker
+pip install -r requirements.txt
 echo "All dependencies are installed successfully."
