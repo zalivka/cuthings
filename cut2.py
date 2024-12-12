@@ -29,7 +29,7 @@ def get_coordinates():
 
     cut(x, y, initDevice(), filename)
 
-
+#
     # Vectorize
     vtracer.convert_image_to_svg_py(image_path='static/mask_0.png', out_path='static/mask_0_vectorized.svg')
     with open('static/mask_0_vectorized.svg', 'r') as textfile:

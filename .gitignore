@@ -8,6 +8,7 @@ __pycache__/
 venv/
 env/
 c_env/
+cutenv/
 /.env
 
 # IDE files
@@ -40,3 +41,5 @@ settings.ini
 
 # Ignore any sensitive information
 secrets.json
+
+sam2_hiera_large.pt
