@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Image</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='mask_0.png') }}" onclick="handleClick(event)">
+</body>
+{% if txt_content %}
+<div class="text-content">
+    <h2>Text File Content:</h2>
+    <pre>{{ txt_content }}</pre>
+</div>
+{% endif %}
+</html>

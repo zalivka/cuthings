@@ -1,0 +1,42 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+c_env/
+/.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependency directories
+/venv
+/.venv
+/pip-selfcheck.json
+
+# Log files
+*.log
+
+# Compiled Python files
+*.pyc
+
+# Pytest cache
+pytest_cache/
+
+# Ignore Jupyter Notebook checkpoint files
+.ipynb_checkpoints/
+
+# Ignore any files/directories that are generated during the build process (e.g., build/ dist/)
+/build
+/dist
+
+# Ignore any local settings files
+settings.ini
+
+# Ignore any sensitive information
+secrets.json
