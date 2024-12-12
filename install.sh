@@ -1,35 +1,30 @@
 #!/bin/bash
 
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# All rights reserved.
 
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-# Check if -nocp is in any of the passed parameters
 skip_checkpoints=false
+create_env=false
 for param in "$@"; do
     if [ "$param" = "-nocp" ]; then
         skip_checkpoints=true
-        break
+    fi
+    if [ "$param" = "-env" ]; then
+        create_env=true
     fi
 done
 
 # Run checkpoints.sh
-if [ "$1" != "-nocp" ]; then
+if [ "$skip_checkpoints" = false ]; then
     echo "Running checkpoints.sh..."
     ./checkpoints.sh
-fi
-
-# Check if the script executed successfully
-if [ $? -eq 0 ]; then
-    echo "checkpoints.sh executed successfully."
 else
-    echo "Error: checkpoints.sh failed to execute properly."
-    exit 1
+    echo "Skipping checkpoints.sh..."
 fi
 
-python -m venv cutenv
-source cutenv/bin/activate
+
+if [ "$create_env" = true ]; then
+    python -m venv cutenv
+    source cutenv/bin/activate
+fi
 
 
 pip install -r requirements.txt
