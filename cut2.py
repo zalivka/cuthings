@@ -102,10 +102,10 @@ def cut(x, y, device, filename):
     # image = Image.open('images/truck.jpg')
     image = np.array(image.convert("RGB"))
 
-    # sam2_checkpoint = "sam2_hiera_large.pt"
-    # model_cfg = "sam2_hiera_l.yaml"
-    sam2_checkpoint = "sam2_hiera_tiny.pt"
-    model_cfg = "sam2_hiera_t.yaml"
+    sam2_checkpoint = "sam2_hiera_large.pt"
+    model_cfg = "sam2_hiera_l.yaml"
+    # sam2_checkpoint = "sam2_hiera_tiny.pt"
+    # model_cfg = "sam2_hiera_t.yaml"
 
     sam2_model = build_sam2(model_cfg, sam2_checkpoint, device=device)
 
