@@ -7,8 +7,10 @@
 # LICENSE file in the root directory of this source tree.
 
 # Run checkpoints.sh
-echo "Running checkpoints.sh..."
-./checkpoints.sh
+if [ "$1" != "-nocp" ]; then
+    echo "Running checkpoints.sh..."
+    ./checkpoints.sh
+fi
 
 # Check if the script executed successfully
 if [ $? -eq 0 ]; then
